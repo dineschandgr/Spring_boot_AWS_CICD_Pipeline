@@ -1,0 +1,11 @@
+<form action="#" th:action="@{/addTopic}" th:object="${topic}" method="post">
+	<label for="topicId">Topic ID</label>
+    <input type="text" th:field="*{topicId}" id="topicId" placeholder="topicId">
+    <label for="topicName">Topic Name</label>
+    <input type="text" th:field="*{topicName}" id="topicName" placeholder="Name">
+    <span th:if="${#fields.hasErrors('topicName')}" th:errors="topicName"></span>
+    <label for="topicDescrption">Topic Description</label>
+    <input type="text" th:field="*{topicDescription}" id="*{topicDescription}" placeholder="">
+    <span th:if="${#fields.hasErrors('*{topicDescription}')}" th:errors="*{*{topicDescription}}"></span>
+    <input type="submit" value="Add Topic">   
+</form>

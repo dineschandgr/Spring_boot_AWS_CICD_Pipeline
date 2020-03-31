@@ -1,0 +1,26 @@
+<div th:switch="${topics}">
+    <h2 th:case="null">No topics yet!</h2>
+        <div th:case="*">
+            <h2>Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="topic : ${topics}">
+                    <td th:text="${topic.topicId}"></td>
+                    <td th:text="${topic.topicName}"></td>
+                    <td th:text="${topic.topicDescription}"></td>
+                    <td><a th:href="@{/edit/{id}(id=${topic.topicId})}">Edit</a></td>
+                    <td><a th:href="@{/delete/{id}(id=${topic.topicId})}">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>      
+    <p><a href="/signup">Add a new Topic</a></p>
+</div>
