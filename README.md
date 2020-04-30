@@ -29,12 +29,12 @@ You need to add pom.xml with the maven dependencies
 
 2. The following configurations must be define in AWS Beanstalk Enviroment variables under software configuration
 
-SERVER_PORT : 5000
-SPRING_DATASOURCE_URL : AWS RDS MYSQL DB URL
-spring.datasource.username : username
-spring.datasource.password : password
-SPRING_JPA_DATABASE_PLATFORM : org.hibernate.dialect.MySQL8Dialect
-SPRING_JPA_HIBERNATE_DDL_AUTO : update
+1. SERVER_PORT : 5000
+2. SPRING_DATASOURCE_URL : AWS RDS MYSQL DB URL
+3. spring.datasource.username : username
+4. spring.datasource.password : password
+5. SPRING_JPA_DATABASE_PLATFORM : org.hibernate.dialect.MySQL8Dialect
+6. SPRING_JPA_HIBERNATE_DDL_AUTO : update
 
 #AWS CodeCommit Repo
 Create a Code Commit Repsitory to Push the Code
